@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "69bebe1a-7554-4524-8433-fcbef75d7e29",
+		"name": "Curso BAZ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET with Variables",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/get?somevariable={{parameter_value}}&Nomvre=Miguel Angel",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "somevariable",
+							"value": "{{parameter_value}}"
+						},
+						{
+							"key": "Nomvre",
+							"value": "Miguel Angel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST with variables",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Valor 1",
+							"value": "tres",
+							"type": "default"
+						},
+						{
+							"key": "Valor 2",
+							"value": "dos",
+							"type": "default"
+						},
+						{
+							"key": "Valor 3",
+							"value": "une",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/post?urlParam={{parameter_value}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "urlParam",
+							"value": "{{parameter_value}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://images.ctfassets.net/yadj1kx9rmg0/wtrHxeu3zEoEce2MokCSi/cf6f68efdcf625fdc060607df0f3baef/quwowooybuqbl6ntboz3.jpg",
+					"protocol": "https",
+					"host": [
+						"images",
+						"ctfassets",
+						"net"
+					],
+					"path": [
+						"yadj1kx9rmg0",
+						"wtrHxeu3zEoEce2MokCSi",
+						"cf6f68efdcf625fdc060607df0f3baef",
+						"quwowooybuqbl6ntboz3.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gzip response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/gzip",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"gzip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"status_code\" : 1 , \"transaction_id\" : \"67890\" , \"payment_sub_type\" : \"EMV_PIN\" }"
+				},
+				"url": {
+					"raw": "{{base_url}}/put",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"put"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HEAD",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/headers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"headers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
