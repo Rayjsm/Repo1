@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "b318df2a-7218-4a52-a1ce-07df8b419cf6",
+		"name": "Entregable3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RestTemplate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/paises/api/publica",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"api",
+						"publica"
+					],
+					"query": [
+						{
+							"key": "pais",
+							"value": "Mexico",
+							"disabled": true
+						},
+						{
+							"key": "poblacion",
+							"value": "110000000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertaPais",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pais\":\"Mexico\",\r\n    \"poblacion\":\"110000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/paises/inserta",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"inserta"
+					],
+					"query": [
+						{
+							"key": "pais",
+							"value": "Mexico",
+							"disabled": true
+						},
+						{
+							"key": "poblacion",
+							"value": "110000000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtienePais",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pais\" : \"India\",\r\n    \"poblacion\" : \"1000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/paises/obtiene",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"obtiene"
+					],
+					"query": [
+						{
+							"key": "pais",
+							"value": "Mexico",
+							"disabled": true
+						},
+						{
+							"key": "poblacion",
+							"value": "110000000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificaPais",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pais\":\"Mexico\",\r\n    \"poblacion\":\"200000000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/paises/modifica",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"modifica"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "borraPais",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pais\" : \"Mexico\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/paises/borra",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"borra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtieneHeaders",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/paises/obtiene",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"paises",
+						"obtiene"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
